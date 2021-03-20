@@ -48,6 +48,18 @@ const AddCategory = () => {
         </form>
     );
 
+    const showSuccess = () => {
+        if(success) {
+            return <h3 className="text-success">{name} is created</h3>
+        }
+    }
+
+    const showError = () => {
+        if(error) {
+            return <h3 className="text-danger">{name} is should be unique</h3>
+        }
+    }
+
     return (
         <Layout title="Add a new category" description={`G'day ${name}, ready to add a new category?`}>
                 <div className="row">
